@@ -43,6 +43,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
+    #selects and returns variables
     print('Hello! Let\'s explore some US bikeshare data!')
 
     try:
@@ -160,8 +161,7 @@ def trip_duration_stats(df):
     sum_travel_time = df['duration'].sum()
     print(f"The total trip duration is {sum_travel_time} hours, minutes and seconds.")
     mean_travel_time = df['duration'].mean()
-    print(f"The average trip lasts for {mean_travel_time} hours, minutes and seconds.")
-
+    print(f"The average trip duration is {mean_travel_time} hours, minutes and seconds.")
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -194,8 +194,16 @@ def user_stats(df, city):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+<<<<<<< HEAD
 
 def display_csv(df):
+||||||| 90205eb
+
+def display_csv_data(df):
+=======
+
+def display_csv_data(df):
+>>>>>>> documentation
     """Displays raw data to user """
 
     counter = 0
@@ -227,8 +235,16 @@ def main():
         station_stats(df, city)
         trip_duration_stats(df)
         user_stats(df, city)
+<<<<<<< HEAD
         display_csv(df)
 
+||||||| 90205eb
+        display_csv_data(df)
+
+=======
+        display_csv_data(df)
+
+>>>>>>> documentation
         restart = input("\nWould you like to restart? Enter 'y' for 'yes', 'n' for 'no': \n")
         if restart.lower() != 'y':
             break
