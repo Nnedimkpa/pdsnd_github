@@ -188,7 +188,7 @@ def user_stats(df, city):
         earliest = int(df['Birth Year'].min())
         most_recent = int(df['Birth Year'].max())
         common_year = int(df['Birth Year'].mode()[0])
-        print(f"\nThe earliest year of birth: {earliest}\nThe most recent year of birth: {most_recent}\nThe most common year of birth: {common_year}")
+        print(f"\nThe oldest person was born in: {earliest}\nThe youngest person was born in: {most_recent}\nMost people are born in: {common_year}")
     except:
         print(f"No birth year details in {city.title()} file.")
 
